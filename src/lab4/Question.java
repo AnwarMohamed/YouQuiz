@@ -1,8 +1,23 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *
+ *  Copyright (C) 2014  Anwar Mohamed <anwarelmakrahy[at]gmail.com>
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to Anwar Mohamed
+ *  anwarelmakrahy[at]gmail.com
+ *
  */
+
 package lab4;
 
 import java.util.ArrayList;
@@ -35,6 +50,7 @@ public abstract class Question {
     public final static int QUESTION_TYPE_ABSTRACT = 0;
     public final static int QUESTION_TYPE_SHORT_ANSWER = 1;
     public final static int QUESTION_TYPE_MULTIPLE_CHOICE = 2;
+    public final static int QUESTION_TYPE_TRUE_FALSE = 3;
 
     public int getType() {
         return type;
@@ -53,7 +69,7 @@ public abstract class Question {
     }
 
     public void setAnswer(String answer) {
-        this.answer.add(answer);
+        this.answer.add(answer.toLowerCase());
     }
 
     public void setAnswer(ArrayList<String> answer) {
@@ -61,6 +77,6 @@ public abstract class Question {
     }
 
     public boolean checkAnswer(String answer) {
-        return this.answer.contains(answer);
+        return this.answer.contains(answer.toLowerCase());
     }
 }

@@ -1,5 +1,17 @@
 [
-    {   "question"  : "",
+    {   
+        "question"  : "How old are you ?",
         "type"      : 1,
-        "answer"    : "anwar"   },
+        "answer"    : "Fine"   
+    },
+    {   
+        "question"  : "What is your name ?",
+        "type"      : 2,
+        "answer"    : "anwar",
+        "choices"   : ["anwar", "ahmed", "mohamed"]
+    },
+    {   "question"  : "Can you see ?",
+        "type"      : 3,
+        "answer"    : "true"   
+    }     
 ]
